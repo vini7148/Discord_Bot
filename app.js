@@ -4,6 +4,10 @@ const Discord = require("discord.js");
 // Create a new client using the new keyword
 const client = new Discord.Client();
 
+const {
+    token
+} = require("./token.json");
+
 // Display a message once the bot has started
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -32,4 +36,4 @@ client.on("message", msg => {
 });
 
 // Log in the bot with the token
-client.login("NjU0NjY0OTc1ODg1MDA4OTIy.XfI2dQ.16AHX4bglwW_T9GVUeJx9ZpCsJY");
+client.login(token);
